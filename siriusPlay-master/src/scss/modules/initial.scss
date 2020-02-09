@@ -1,0 +1,102 @@
+@import "../variables";
+
+#initial {
+  position: absolute;
+  margin-top: 50vh;
+  width: 100%;
+  button {
+    margin: auto;
+    font-size: 20px;
+    &:first-child {
+      margin-bottom: 10px;
+      font-size: 40px;
+    }
+  }
+}
+.MuiTooltip-popper {
+  div{
+    font-size: 20px !important;
+    background-color: $green;
+    color: $beige;
+    padding:10px;
+  }
+  div:after {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+#modal {
+  width: 100%;
+  height: 100%;
+  background-color: $green;
+  color: $beige;
+  form {
+    padding-top: 60px;
+    div {
+      width: 250px !important;
+    }
+  }
+  p {
+    margin: 0;
+    padding: 30px;
+  }
+  #rulesTitle {
+    padding: 0;
+    text-align: center;
+    padding-top: 20px;
+  }
+  #generalRules {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  #generalRules p {
+    padding: 0;
+  }
+  .contactUsText {
+    text-align: center;
+    padding: 0;
+    padding-top: 70px;
+  }
+  section {
+    display: grid;
+    grid-gap: 1vw;
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    div p {
+      padding: 0;
+      padding-left: 10px !important;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  #modal p {
+    font-size: 14px;
+  }
+  .balance text {
+    padding: 10px;
+    padding-bottom: 10px !important;
+  }
+  .MuiFormControlLabel-root  {
+    padding-top: 10px;
+    margin: auto !important;
+    margin-bottom: 10px !important;
+  }
+  #modal section {
+    display: block;
+    div {
+      margin-top: 10px;
+    }
+  }
+  #modal {
+    form div {
+      width: 160px !important;
+    }
+    button {
+      margin: 50px auto auto !important;
+    }
+    #rulesTitle, #generalRules, #generalRules2 div p {
+      font-size: 12px;
+    }
+  }
+}

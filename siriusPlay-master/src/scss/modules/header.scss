@@ -1,0 +1,107 @@
+@import "../variables.scss";
+
+header{
+  text-align: center;
+  position: relative;
+  #navbar {
+    background: $green;
+    height: 62px;
+    #logIn {
+      display: inline-block;
+      float: right;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      .MuiSvgIcon-root {
+        cursor: pointer;
+        width: 2em;
+        height: 2em;
+      }
+      #name {
+        width: 250px;
+        display: inline-block;
+        position: absolute;
+        right: 45%;
+      }
+      p {
+        margin-right: 10px;
+      }
+
+  }
+  }
+  #logo {
+    width: 100px;
+    display: inline-block;
+    background-size: 100% 100%;
+    height: 64px;
+    background-image: url(../../static/logo.png);
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+.MuiTooltip-popper {
+  div{
+    border: 0;
+    text-align: center;
+    outline: 0;
+    width: 250px;
+  }
+}
+.clickable {
+  margin: 0;
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: auto;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $beige;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: $thetransition;
+    transition: $thetransition;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+.MuiTooltip-arrow {
+  color: $green !important;
+  font-size: 8px !important;
+}
+.MuiFormGroup-row {
+  margin: auto;
+  width: fit-content;
+}
+
+@media (max-width: 700px) {
+  video {
+    height: 900px !important;
+  }
+  header #navbar{
+    height: 10vh;
+    #logIn #name {
+      display: none;
+    }
+  }
+  .MuiTooltip-popper {
+    div{
+      margin-top: 23px;
+    }
+  }
+}
+
+//https://speckyboy.com/underline-text-effects-css/ Underline

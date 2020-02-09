@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  user-select: none;
+  height: 100%;
+  color: $beige;
+  background-color: #000000;
+  font-family:"Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  margin-bottom:50px;
+}
+
+#videoImage {
+  width: 900px;
+  position: fixed;
+  height: 900px;
+  background: url("../../static/poster.jpg") no-repeat 170%;
+  background-size: 140% 100%;
+}

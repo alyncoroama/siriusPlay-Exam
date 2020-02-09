@@ -1,0 +1,108 @@
+@import "~normalize-scss/sass/_normalize.scss";
+@import "base.scss";
+@import "variables.scss";
+@import "modules/header.scss";
+@import "modules/footer.scss";
+@import "modules/play.scss";
+@import "modules/login.scss";
+@import "modules/initial.scss";
+
+#container {
+  height: 91.5vh;
+}
+button {
+  display: block !important;
+  color: $beige !important;
+  transition: box-shadow 1s !important;
+  background-color: $green !important;
+  &:hover {
+    box-shadow: 0 6px 8px 0 $beige, 0 5px 5px 0 $beige !important;
+  }
+}
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+#placementForLoading {
+  top: 45vh;
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+#videoBugFix {
+  animation: 2s videoAppear linear forwards;
+  opacity: 0;
+}
+video {
+  animation: 2s videoAppear linear forwards;
+  opacity: 0;
+}
+@keyframes videoAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    font-size: 2em;
+  }
+  25% {
+    font-size: 2.5em;
+  }
+  50% {
+    font-size: 2em;
+  }
+  75% {
+    font-size: 2.5em;
+  }
+  100% {
+    font-size: 2em;
+  }
+}
+#loading {
+  color: $green;
+  width: 90px !important;
+  height: 90px !important;
+}
+#modal {
+  .balanceText {
+    text-align:center;
+    padding-top: 70px !important;
+    padding-bottom: 100px !important;
+  }
+  textarea {
+    color: $beige;
+  }
+  .MuiFormControlLabel-root {
+    border: $beige 1px solid;
+    padding: 5px;
+    margin-left: 20px;
+    .MuiCheckbox-root, .MuiCheckbox-colorPrimary.Mui-checked {
+      color: $beige;
+    }
+  }
+  button {
+    margin: 100px auto auto;
+    border: $beige 1px solid;
+  }
+
+  @media (max-width: 700px) {
+
+    .MuiFormGroup-row {
+      flex-direction:column;
+    }
+    .balanceText {
+      padding-bottom: 10px !important;
+    }
+  }
+}
