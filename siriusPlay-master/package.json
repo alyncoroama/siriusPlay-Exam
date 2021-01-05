@@ -23,7 +23,7 @@
     "@material-ui/icons": "^4.5.1",
     "@material-ui/pickers": "^3.2.8",
     "app": "^0.1.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "date-fns": "^2.1.0",
     "git": "^0.1.5",
     "js-cookie": "^2.2.1",
